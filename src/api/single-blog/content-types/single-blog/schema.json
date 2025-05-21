@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "single_blogs",
+  "info": {
+    "singularName": "single-blog",
+    "pluralName": "single-blogs",
+    "displayName": "SingleBlog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "disc": {
+      "type": "text"
+    },
+    "Someone": {
+      "type": "boolean"
+    }
+  }
+}
