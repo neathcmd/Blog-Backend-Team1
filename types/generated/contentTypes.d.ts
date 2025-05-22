@@ -918,9 +918,9 @@ export interface PluginUsersPermissionsUser
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
+    avatar: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     blocked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     blogs: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'>;
     confirmationToken: Schema.Attribute.String & Schema.Attribute.Private;
