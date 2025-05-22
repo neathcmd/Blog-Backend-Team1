@@ -9,7 +9,7 @@
     "displayName": "User"
   },
   "options": {
-    "draftAndPublish": false
+    "timestamps": true
   },
   "attributes": {
     "username": {
@@ -65,6 +65,17 @@
       "inversedBy": "users",
       "configurable": false
     },
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog",
+      "mappedBy": "author"
+    },
+    "likes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::like.like",
+      "mappedBy": "user"
     "avatar": {
       "allowedTypes": [
         "images",
