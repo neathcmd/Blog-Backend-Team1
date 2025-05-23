@@ -76,13 +76,9 @@
       "relation": "oneToMany",
       "target": "api::like.like",
       "mappedBy": "user"
+    },
     "avatar": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
+      "allowedTypes": ["images", "files", "videos", "audios"],
       "type": "media",
       "multiple": false,
       "required": false
