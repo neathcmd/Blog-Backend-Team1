@@ -78,10 +78,21 @@
       "mappedBy": "user"
     },
     "avatar": {
-      "allowedTypes": ["images", "files", "videos", "audios"],
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
       "type": "media",
       "multiple": false,
       "required": false
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::comment.comment",
+      "mappedBy": "users_id"
     }
   }
 }
