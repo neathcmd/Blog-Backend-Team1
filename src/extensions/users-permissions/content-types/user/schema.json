@@ -65,17 +65,29 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "posts": {
+    "blogs": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::post.post",
-      "mappedBy": "user_id"
+      "target": "api::blog.blog",
+      "mappedBy": "author"
     },
-    "comment": {
+    "likes": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "oneToMany",
+      "target": "api::like.like",
+      "mappedBy": "user"
+    },
+    "avatar": {
+      "allowedTypes": ["images", "files", "videos", "audios"],
+      "type": "media",
+      "multiple": false,
+      "required": false
+    },
+    "comments": {
+      "type": "relation",
+      "relation": "oneToMany",
       "target": "api::comment.comment",
-      "inversedBy": "users"
+      "mappedBy": "users_id"
     }
   }
 }

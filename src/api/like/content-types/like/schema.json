@@ -1,31 +1,26 @@
 {
   "kind": "collectionType",
-  "collectionName": "comments",
+  "collectionName": "likes",
   "info": {
-    "singularName": "comment",
-    "pluralName": "comments",
-    "displayName": "Comment",
-    "description": ""
+    "singularName": "like",
+    "pluralName": "likes",
+    "displayName": "Like"
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "content": {
-      "type": "string",
-      "required": true
-    },
-    "post_id": {
+    "blog": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::blog.blog",
-      "inversedBy": "comments"
+      "inversedBy": "likes"
     },
-    "users_id": {
+    "user": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "plugin::users-permissions.user",
-      "inversedBy": "comments"
+      "inversedBy": "likes"
     }
   }
 }
